@@ -1,0 +1,12 @@
+task  text<<{ 
+  	println "text"
+}
+text.doFirst{
+	println "First"
+}
+text <<{
+	println "add"
+}
+text.doLast{
+	println "Last" 
+}

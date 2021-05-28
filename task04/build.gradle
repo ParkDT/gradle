@@ -1,0 +1,9 @@
+task text1<<{
+ println "texk1"
+} 
+task text2<<{
+ print "task2"
+}
+task dep_text(dependsOn : text1){
+ println "tesk3"
+}

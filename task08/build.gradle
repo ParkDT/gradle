@@ -1,0 +1,6 @@
+task text{
+	ext.text_sub="sub-text"
+}
+task print_text<<{
+	println text.text_sub
+}

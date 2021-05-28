@@ -1,0 +1,8 @@
+def id = ['name':'bs','type':'worker']
+def product = ["a","b","c","d","e"] 
+
+task text<<{
+ println id['name']
+ println product[1]
+
+}

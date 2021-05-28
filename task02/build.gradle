@@ -1,0 +1,9 @@
+//task 문자형 
+
+def text1 = 'Text'
+String  text2  = "$text1"
+
+task text<<{
+ println "$text1" + text2.toUpperCase()
+ println text2.toLowerCase()
+}

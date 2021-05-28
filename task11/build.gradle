@@ -1,0 +1,11 @@
+defaultTasks 'clean', 'run'
+
+task clean <<{
+println "clean"
+}
+task run <<{
+println "run"
+}
+task other<<{
+println "other"
+}

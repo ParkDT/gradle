@@ -1,0 +1,19 @@
+task checksum<<{
+	fileList('./file').each {File file ->
+		ant.checksum(file : file, property: "cs_$file.name")
+		println "$file.name Check_sum : ${ant.properties["cs_$file.name"]}"
+}
+}
+
+task loadfile<<{
+
+	fileList('./file').each { File file ->
+		ant.loadfile(scrfile : file , property : file.name)
+		println "I'm found of $file.name"
+	
+}
+}
+
+File[] fileList(String dir) {
+	file(dir).listFiles({file -> file.isFile()} as FileFilter).sort()
+}

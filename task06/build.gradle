@@ -1,0 +1,8 @@
+4.times{
+  counter->
+   task"task$counter"<<{
+   println "task counter is $counter"
+  }
+}
+
+task0.dependsOn task2,task3
